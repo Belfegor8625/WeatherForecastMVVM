@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">WeatherForecastMVVM</string>
+
+    <!-- Bottom Navigation Bar item titles -->
+    <string name="title_today">Today</string>
+    <string name="title_7days">7 Days</string>
+    <string name="title_settings">Settings</string>
+
 </resources>
