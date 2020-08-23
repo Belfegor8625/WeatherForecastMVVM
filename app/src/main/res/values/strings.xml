@@ -1,9 +1,18 @@
 <resources>
-    <string name="app_name">WeatherForecastMVVM</string>
+	<string name="app_name">WeatherForecastMVVM</string>
 
-    <!-- Bottom Navigation Bar item titles -->
-    <string name="title_today">Today</string>
-    <string name="title_7days">7 Days</string>
-    <string name="title_settings">Settings</string>
+	<!-- Bottom Navigation Bar item titles -->
+	<string name="title_today">Today</string>
+	<string name="title_7days">7 Days</string>
+	<string name="title_settings">Settings</string>
 
+	<!-- Loading/progressbar -->
+	<string name="loading">Loading</string>
+
+	<!-- CurrentWeatherFragment -->
+	<string name="temperature">%1$d%2$s</string>
+	<string name="feels_like">Feels like %1$d%2$s</string>
+	<string name="precipitation">Precipitation: %1$.2f %2$s</string>
+	<string name="wind">Wind: %1$s, %2$d %3$s</string>
+    <string name="visibility">Visibility: %1$d %2$s</string>
 </resources>

@@ -4,7 +4,7 @@ package com.bartoszlewandowski.weatherforecastmvvm.data.db.unitlocalized
  * Created by Bartosz Lewandowski on 21.08.2020
  */
 data class MetricCurrentWeatherEntry(
-	override val unit: String,
+	override val unit: String?,
 	override val temperature: Int,
 	override val windSpeed: Int,
 	override val cloudcover: Int,

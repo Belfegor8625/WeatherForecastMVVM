@@ -4,7 +4,7 @@ package com.bartoszlewandowski.weatherforecastmvvm.data.db.unitlocalized
  * Created by Bartosz Lewandowski on 21.08.2020
  */
 data class ImperialCurrentWeatherEntry(
-	override val unit: String,
+	override val unit: String?,
 	override val temperature: Int,
 	override val windSpeed: Int,
 	override val cloudcover: Int,
@@ -20,4 +20,5 @@ data class ImperialCurrentWeatherEntry(
 	override val weatherDescriptions: List<String>,
 	override val weatherIcons: List<String>,
 	override val windDegree: Int,
-	override val windDir: String) : UnitSpecificCurrentWeatherEntry
+	override val windDir: String) :
+	UnitSpecificCurrentWeatherEntry

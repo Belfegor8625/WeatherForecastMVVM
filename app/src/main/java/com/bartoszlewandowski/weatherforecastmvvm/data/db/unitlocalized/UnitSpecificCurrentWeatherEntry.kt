@@ -4,7 +4,7 @@ package com.bartoszlewandowski.weatherforecastmvvm.data.db.unitlocalized
  * Created by Bartosz Lewandowski on 21.08.2020
  */
 interface UnitSpecificCurrentWeatherEntry {
-	val unit: String
+	val unit: String?
 	val cloudcover: Int
 	val feelslike: Int
 	val humidity: Int

@@ -4,7 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.bartoszlewandowski.weatherforecastmvvm.data.db.entity.CurrentWeatherEntry
+import com.bartoszlewandowski.weatherforecastmvvm.data.db.entity.CurrentWeatherTypeConverters
 
 /**
  * Created by Bartosz Lewandowski on 21.08.2020
@@ -12,8 +14,9 @@ import com.bartoszlewandowski.weatherforecastmvvm.data.db.entity.CurrentWeatherE
 
 @Database(
 	entities = [CurrentWeatherEntry::class],
-	version = 1
+	version = 2
 )
+@TypeConverters(CurrentWeatherTypeConverters::class)
 abstract class ForecastDatabase : RoomDatabase() {
 	abstract fun currentWeatherDao(): CurrentWeatherDao
 
