@@ -5,15 +5,13 @@ import androidx.room.TypeConverter
 /**
  * Created by Bartosz Lewandowski on 22.08.2020
  */
-class CurrentWeatherTypeConverters {
+object CurrentWeatherTypeConverters {
 
 	@TypeConverter
-	fun fromListOfStrings(list: List<String>?): String? {
-		return list?.joinToString()
-	}
+	fun fromListOfStrings(list: List<String>?) = list?.joinToString()
 
 	@TypeConverter
-	fun stringToList(string: String?): List<String>? {
-		return string?.split(", ".toRegex())?.map { it.trim() }
+	fun stringToList(string: String?) = string?.let {
+		it.split(", ".toRegex()).map { element -> element.trim() }
 	}
 }

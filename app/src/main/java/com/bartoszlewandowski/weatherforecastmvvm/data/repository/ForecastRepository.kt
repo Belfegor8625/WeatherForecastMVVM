@@ -1,6 +1,7 @@
 package com.bartoszlewandowski.weatherforecastmvvm.data.repository
 
 import androidx.lifecycle.LiveData
+import com.bartoszlewandowski.weatherforecastmvvm.data.db.entity.WeatherLocation
 import com.bartoszlewandowski.weatherforecastmvvm.data.db.unitlocalized.UnitSpecificCurrentWeatherEntry
 
 /**
@@ -9,4 +10,5 @@ import com.bartoszlewandowski.weatherforecastmvvm.data.db.unitlocalized.UnitSpec
 
 interface ForecastRepository {
 	suspend fun getCurrentWeather(metric: Boolean): LiveData<out UnitSpecificCurrentWeatherEntry>
+	suspend fun getWeatherLocation(): LiveData<WeatherLocation>
 }

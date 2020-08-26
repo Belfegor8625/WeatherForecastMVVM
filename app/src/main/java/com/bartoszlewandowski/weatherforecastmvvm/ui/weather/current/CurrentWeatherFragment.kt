@@ -37,6 +37,8 @@ class CurrentWeatherFragment : ScopedFragment(), DIAware {
 
 	private fun bindUI() = launch {
 		val currentWeather = viewModel.weather.await()
+		val weatherLocation = viewModel.weatherLocation.await()
+
 		currentWeather.observe(viewLifecycleOwner, Observer {
 			if (it == null) return@Observer
 
@@ -52,6 +54,11 @@ class CurrentWeatherFragment : ScopedFragment(), DIAware {
 			Glide.with(this@CurrentWeatherFragment)
 				.load(it.weatherIcons[0])
 				.into(imageView_condition_icon)
+		})
+
+		weatherLocation.observe(viewLifecycleOwner, Observer { location ->
+			if (location == null) return@Observer
+			updateLocation(location.name)
 		})
 	}
 

@@ -7,18 +7,20 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.bartoszlewandowski.weatherforecastmvvm.data.db.entity.CurrentWeatherEntry
 import com.bartoszlewandowski.weatherforecastmvvm.data.db.entity.CurrentWeatherTypeConverters
+import com.bartoszlewandowski.weatherforecastmvvm.data.db.entity.WeatherLocation
 
 /**
  * Created by Bartosz Lewandowski on 21.08.2020
  */
 
 @Database(
-	entities = [CurrentWeatherEntry::class],
-	version = 2
+	entities = [CurrentWeatherEntry::class, WeatherLocation::class],
+	version = 1
 )
 @TypeConverters(CurrentWeatherTypeConverters::class)
 abstract class ForecastDatabase : RoomDatabase() {
 	abstract fun currentWeatherDao(): CurrentWeatherDao
+	abstract fun weatherLocationDao(): WeatherLocationDao
 
 	companion object {
 		@Volatile
